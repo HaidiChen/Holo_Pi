@@ -1,0 +1,10 @@
+# server side structure
+
+HoloPi/
+    |-----Images/
+    |        |------Uploaded/
+    |        |------DetectionResults/
+    |-----HoloPi_Server.py
+    |-----ncsobjdetection.py
+    |-----mobilenetgraph
+
