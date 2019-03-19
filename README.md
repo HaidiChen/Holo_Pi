@@ -9,12 +9,12 @@ Raspberry Pi 3 model B
 Device3:
 Intel Movidius Neural Compute Stick
 
-#Two parts: 
+# Two parts: 
 1. Hololens Client Development
 2. RaspberryPi Server Development
 
 
-#Basic workflow:
+# Basic workflow:
 
 1. Hololens UWP App calls Web APIs provided by the RaspberryPi to send
 a captured image to the RaspberryPi.
