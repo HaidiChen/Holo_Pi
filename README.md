@@ -23,3 +23,6 @@ a captured image to the RaspberryPi.
 receives the image and store it in a specific local directory and
 then using that image for image processing. Finally, return the processing
 result as a response back to the Hololens. 
+
+# Project demonstration videos:
+goto the address: http://dcslab.cse.unt.edu/~haidi and you will see (if the server is not down) the link to the HoloPi project videos
