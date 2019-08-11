@@ -1,4 +1,4 @@
-# Holo_Pi_V1 -- Cross-Device Project
+# Holo_Pi -- Cross-Device Project
 
 Device1:
 Microsoft HoloLens (1st generation)
