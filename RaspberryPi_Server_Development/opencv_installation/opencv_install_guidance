@@ -1,0 +1,46 @@
+# Step 1: Install OpenCV dependencies
+./opencv_dependencies.sh
+
+# check your python version and install the 
+# corresponding packages, 
+sudo apt-get install python3.x-dev
+
+# Step 2: Download the OpenCV source
+./opencv_download.sh [opencv_version]
+
+# Step 3: Setup Python environment
+./opencv_python.sh
+
+mkvirtualenv cv -p python3
+
+# Step 4: Configuring and compiling OpenCV
+# if you are not sure whether you are under the virtual environment
+# type following command
+workon cv
+
+# otherwise, execute the following command directly
+./opencv_compile.sh
+
+# Step 5: Finish OpenCV installation
+#
+# In this step, find the cv2.cpython-35m-x86_64-linux-gnu.so file
+# it should be under the path like this:
+#
+# /usr/local/lib/python3.5/site-pakcages/
+#
+# and rename it as cv2.so, then link it to the following path:
+#
+# ~/.virtualenvs/cv/lib/python3.6(your own version)/site-packages/
+#
+# by using the commands below:
+#
+# cd ~/.virtualenvs/cv/lib/python3.6/site-packages/
+# ln -s your-path-to-cv2.so-file cv2.so
+
+# Step 6: Testing OpenCV installation
+#
+# enter the virtual environment (e.g. command 'workon cv')
+# enter the interpreter of python
+# import cv2 to see if any thing goes wrong
+# if not, congratulations, OpenCV has been successfully
+# installed on this machine
