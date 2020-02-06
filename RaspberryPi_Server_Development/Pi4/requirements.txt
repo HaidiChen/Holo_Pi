@@ -1,0 +1,6 @@
+imutils
+numpy
+json_minify
+flask
+flask_restful
+requests
