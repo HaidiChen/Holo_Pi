@@ -46,8 +46,13 @@ cp ~/Desktop/holo-pi/test-image.jpg .
 cp ~/Desktop/holo-pi/Raspberry_Server_Development/Pi4/openvino_fd_myriad.py .
 python3 openvino_fd_myriad.py
 
-#14. install python modules
+#14. install python modules under virtual environment
 cd ~/Desktop
-python3 -m venv ncsod
-. ncsod/bin/active
+sudo python3 -m pip install virtualenvwrapper
+echo "export WORKON_HOME=$HOME/.virtualenvs/" >> ~/.bashrc
+echo "export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3" >> ~/.bashrc
+echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
+source ~/.bashrc
+mkvirtualenv ncsod
+workon ncsod
 pip install -r ~/Desktop/holo-pi/RaspberryPi_Server_Development/Pi4/requirements.txt
