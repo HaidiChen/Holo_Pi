@@ -1,7 +1,7 @@
 #Usage:
 
-copy the directory 'HoloPi' to a specific location on the Raspberry Pi
+# Case one:
+if you own a Pi 3, go to the Pi3 directory and copy subfolder called HoloPi to Pi, some installation of modules or libraries required, see 'movidius' and 'opencvinstallation'.
 
-and run the 'HoloPi_Server.py' script according to the usage tips written 
-
-at the top of the script file.s
+# Case two:
+if you own a Pi 4, go to the Pi4 directory and run the setup script. If everything goes well, go to the Pi Desktop/HoloPi/ and run the program HoloPi_Server.py accordingly.
