@@ -23,6 +23,7 @@ sudo apt install -y cmake
 
 #8. setup openvino variables
 echo "source /opt/intel/openvino/bin/setupvars.sh" >> ~/.bashrc
+source ~/.bashrc
 
 #9. add current user to users group 
 #sudo usermod -a -G users "$(whoami)"
