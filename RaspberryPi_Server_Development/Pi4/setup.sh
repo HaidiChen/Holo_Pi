@@ -23,7 +23,7 @@ sudo apt install -y cmake
 
 #8. setup openvino variables
 echo "source /opt/intel/openvino/bin/setupvars.sh" >> ~/.bashrc
-source ~/.bashrc
+exec bash
 
 #9. add current user to users group 
 #sudo usermod -a -G users "$(whoami)"
@@ -53,7 +53,7 @@ sudo python3 -m pip install virtualenvwrapper
 echo "export WORKON_HOME=$HOME/.virtualenvs/" >> ~/.bashrc
 echo "export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3" >> ~/.bashrc
 echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
-source ~/.bashrc
+exec bash
 mkvirtualenv ncsod
 workon ncsod
 pip install -r ~/Desktop/holo-pi/RaspberryPi_Server_Development/Pi4/requirements.txt
