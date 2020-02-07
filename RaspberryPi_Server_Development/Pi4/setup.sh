@@ -43,7 +43,7 @@ cp ~/Desktop/holo-pi/test-image.jpg .
 ./armv7l/Release/object_detection_sample_ssd -m face-detection-adas-0001.xml -d MYRIAD -i test-image.jpg
 
 #13. check openCV installation
-cp ~/Desktop/holo-pi/Raspberry_Server_Development/Pi4/openvino_fd_myriad.py .
+cp ~/Desktop/holo-pi/RaspberryPi_Server_Development/Pi4/openvino_fd_myriad.py .
 python3 openvino_fd_myriad.py
 
 #14. install python modules under virtual environment

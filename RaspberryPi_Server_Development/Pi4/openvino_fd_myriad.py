@@ -5,7 +5,7 @@ net = cv.dnn.readNet('face-detection-adas-0001.xml',
 # Specify target device.
 net.setPreferableTarget(cv.dnn.DNN_TARGET_MYRIAD)
 # Read an image.
-frame = cv.imread('/path/to/image')
+frame = cv.imread('test-image.jpg')
 if frame is None:
     raise Exception('Image not found!')
 # Prepare input blob and perform an inference.
