@@ -1,0 +1,7 @@
+#14. install modules under virtual environment cont.
+# type following commands to finish the setup
+
+$ cd ~/Desktop
+$ mkvirtualenv ncsod
+$ workon ncsod
+$ pip install -r ~/Desktop/holo-pi/RaspberryPi_Server_Development/Pi4/requirements.txt

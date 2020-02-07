@@ -23,4 +23,5 @@ sudo apt install -y cmake
 
 #8. setup openvino variables
 echo "source /opt/intel/openvino/bin/setupvars.sh" >> ~/.bashrc
+echo "run the setup2 script..."
 exec bash

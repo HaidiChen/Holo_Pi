@@ -20,9 +20,10 @@ cp ~/Desktop/holo-pi/RaspberryPi_Server_Development/Pi4/openvino_fd_myriad.py .
 python3 openvino_fd_myriad.py
 
 #13. install python modules under virtual environment
-cd ~/Desktop
 sudo python3 -m pip install virtualenvwrapper
 echo "export WORKON_HOME=$HOME/.virtualenvs/" >> ~/.bashrc
 echo "export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3" >> ~/.bashrc
 echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
+echo "follow the setup3 file to finish the setup."
+cd ~/Desktop/holo-pi/RaspberryPi_Server_Development/Pi4/
 exec bash
