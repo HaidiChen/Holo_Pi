@@ -8,8 +8,8 @@ sudo apt install -y openssh-server
 
 sudo sytemctl restart ssh
 
-#4. install vim, git, libatlas-base-dev
-sudo apt install -y vim git libatlas-base-dev
+#4. install vim, git, libatlas-base-dev etc.
+sudo apt install -y vim git libatlas-base-dev gfortran libopenblas-dev liblapack-dev
 
 #5. copy the HoloPi project folder to the Desktop
 cp -r HoloPi ~/Desktop/

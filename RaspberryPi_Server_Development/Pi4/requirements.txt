@@ -4,3 +4,4 @@ json_minify
 flask
 flask_restful
 requests
+scikit-learn
