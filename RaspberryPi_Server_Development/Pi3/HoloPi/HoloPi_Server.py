@@ -1,6 +1,6 @@
 # usage:
 # python3 HoloPi_Server.py -t [IP Address of the other Pi]
-from flask import Flask, jsonify 
+from flask import Flask, jsonify, request
 from flask_restful import Resource, Api, reqparse
 import werkzeug, os
 from werkzeug.utils import secure_filename
