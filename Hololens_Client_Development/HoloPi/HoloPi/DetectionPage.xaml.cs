@@ -177,6 +177,8 @@ namespace HoloPi
         {
             var client = new HttpClient();
             HttpResponseMessage result = new HttpResponseMessage();
+            // notice that 'split()' method is used to drop the extension ".jpg"
+            string key = photo.Name.Split('.')[0];
             try
             {
                 this.Frame.IsEnabled = false;
@@ -186,8 +188,6 @@ namespace HoloPi
                 result = await client.PostAsync(new Uri(RP_Uri), httpContents);
                 string response = await result.Content.ReadAsStringAsync();
 
-                // notice that 'split()' method is used to drop the extension ".jpg"
-                string key = photo.Name.Split('.')[0];
                 AddRespToDictionary(key, response);
                 AddDetectionToList(key);
 
@@ -210,6 +210,8 @@ namespace HoloPi
             catch (Exception e)
             {
                 debug.Visibility = Visibility.Visible;
+                responseDict.Remove(key);
+                DetectionList.Items.RemoveAt(DetectionList.Items.Count - 1);
             }
             finally
             {
