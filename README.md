@@ -4,15 +4,14 @@ Device1:
 Microsoft HoloLens (1st generation)
 
 Device2:
-Raspberry Pi 3 model B
+Raspberry Pi 3 model B or Pi 4
 
 Device3:
-Intel Movidius Neural Compute Stick
+Intel Movidius Neural Compute Stick 1
 
 # Two parts: 
 1. Hololens Client Development
 2. RaspberryPi Server Development
-
 
 # Basic workflow:
 
