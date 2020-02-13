@@ -122,15 +122,22 @@ namespace HoloPi
             HttpClient httpClient = new HttpClient();
             HttpResponseMessage response = new HttpResponseMessage();
             
-            response = await httpClient.GetAsync(new Uri("http://" + RP_IP + ":5000/notify"));
-            string receivedString = await response.Content.ReadAsStringAsync();
-
-            if (int.Parse(receivedString) == 1)
+            try 
             {
-                receiveBtn.Background = new SolidColorBrush(Windows.UI.Colors.Blue);
+              response = await httpClient.GetAsync(new Uri("http://" + RP_IP + ":5000/notify"));
+              string receivedString = await response.Content.ReadAsStringAsync();
+
+              if (int.Parse(receivedString) == 1)
+              {
+                  receiveBtn.Background = new SolidColorBrush(Windows.UI.Colors.Blue);
+              }
+              
+              httpClient.Dispose();
             }
-            
-            httpClient.Dispose();
+            catch (Exception)
+            {
+              // do nothing
+            }
         }
 
         private void DetectBtn_Click(object sender, RoutedEventArgs e)
@@ -189,7 +196,6 @@ namespace HoloPi
                 string response = await result.Content.ReadAsStringAsync();
 
                 AddRespToDictionary(key, response);
-                AddDetectionToList(key);
 
                 client.Dispose();
                 await photo.DeleteAsync();
@@ -210,8 +216,6 @@ namespace HoloPi
             catch (Exception e)
             {
                 debug.Visibility = Visibility.Visible;
-                responseDict.Remove(key);
-                DetectionList.Items.RemoveAt(DetectionList.Items.Count - 1);
             }
             finally
             {
@@ -232,7 +236,16 @@ namespace HoloPi
             */
 
             // for the fake delete function
-            responseDict.Add(key, response);
+            try
+            {
+              JsonArray responseJA = JsonArray.Parse(response);
+              responseDict.Add(key, response);
+              AddDetectionToList(key);
+            }
+            catch (Exception) 
+            {
+              // don't add to detection list
+            }
         }
 
         // use unique filename as detectionID and put it into
